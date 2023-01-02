@@ -4,7 +4,7 @@ pipeline{
       stages{
        	stage("docker build"){
       	    steps{
-              		 sh "docker build -t pgreeshma/welpython:v1 ."
+              		 sh "docker build -t pgreeshma/login-html:v1 ."
           	 }
        }
      }
