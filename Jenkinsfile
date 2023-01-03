@@ -22,6 +22,7 @@ pipeline{
                          sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker rmi -f $(docker images -q -f dangling=true)"
                          sh "ssh -o StrictHostkeyChecking=no ec2-user@172.31.34.138 docker run -d -p 80:80 --name nginx pgreeshma/login-html:v1"
              }
-                     
-     }
+        }  
+    }
+  }
 }
