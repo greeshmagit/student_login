@@ -4,10 +4,9 @@ COPY . /usr/share/nginx/html
 
 
 FROM python:alpine3.10 as run 
-WORKDIR /usr/src/app
 COPY script.py ./
 COPY requirements.txt ./
-RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
+RUN /usr/local/bin/python -m pip install --upgrade pip --no-cache-dir -r requirements.txt
 CMD ["python","./script.py"]
 COPY --from=builder python /usr/share/nginx/html
 
