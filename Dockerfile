@@ -1,5 +1,6 @@
 
 FROM python:alpine3.11 as builder 
+WORKDIR /usr/src/app
 COPY script.py ./
 COPY requirements.txt ./
 RUN  pip install --upgrade pip --no-cache-dir -r requirements.txt
