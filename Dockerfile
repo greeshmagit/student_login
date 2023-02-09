@@ -8,7 +8,8 @@ RUN  pip install --upgrade pip --no-cache-dir -r requirements.txt
 
 FROM nginx:alpine as run
 LABEL app = login
-COPY --from=builder usr/src/app/script.py /usr/share/nginx/html
+COPY . /usr/share/nginx/html/
+COPY --from=builder /usr/src/app/script.py /usr/share/nginx/html/
 CMD ["python3","./script.py"]
 
  
