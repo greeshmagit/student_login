@@ -4,6 +4,7 @@ WORKDIR /usr/src/app
 COPY script.py ./
 COPY requirements.txt ./
 RUN  pip install --upgrade pip --no-cache-dir -r requirements.txt
+COPY . .
 
 FROM nginx:alpine as run
 LABEL app = login
