@@ -7,6 +7,9 @@ pipeline{
               		 sh "docker build -t pgreeshma/login-html:v1 ."
           	 }
        }
+       stage("copy build files")
+         steps{
+                
       stage("docker push to deckerhub repo"){
       steps{
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pwd', usernameVariable: 'user')]) {
