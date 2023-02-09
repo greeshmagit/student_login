@@ -8,7 +8,7 @@ COPY script.py ./
 COPY requirements.txt ./
 RUN  pip install --upgrade pip --no-cache-dir -r requirements.txt
 CMD ["python3","./script.py"]
-COPY --from=builder  /usr/share/nginx/html/* ./script.py
+COPY --from=builder  /usr/share/nginx/html build
 
 
 
