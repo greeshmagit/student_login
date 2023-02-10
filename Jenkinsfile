@@ -11,7 +11,7 @@ pipeline{
       steps{
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pwd', usernameVariable: 'user')]) {
                     sh "docker login -u ${user} -p ${pwd}"
-                    sh "docker push pgreeshma/login-html:v1"
+                    sh "docker push pgreeshma/login-html:v2"
                    }
             }
     }
