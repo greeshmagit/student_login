@@ -4,7 +4,7 @@ pipeline{
       stages{
        	stage("docker build"){
       	    steps{
-              		 sh "docker build -t pgreeshma/login-html:latest ."
+              		 sh "docker build -t pgreeshma/login-html:v2 ."
           	 }
        }
       stage("docker push to deckerhub repo"){
