@@ -11,6 +11,6 @@ FROM nginx:alpine as run
 LABEL app = login
 COPY . /usr/share/nginx/html/
 #COPY --from=builder /usr/src/app/ /usr/share/nginx/html/
-CMD ["python3","./script.py"]
+CMD ["python","./script.py"]
 
  
